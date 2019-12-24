@@ -18,4 +18,4 @@ jobs:
           command: 'make config=debug'
       - run:
           name: Building release
-          command: 'make config=release'
+          command: 'cd Generated && make config=release'
