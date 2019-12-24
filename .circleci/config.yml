@@ -15,7 +15,7 @@ jobs:
           command: 'apt-get update && sudo apt-get install -y cmake'
       - run:
           name: Building debug
-          command: 'make config=debug'
+          command: 'cd Generated && make config=debug'
       - run:
           name: Building release
           command: 'cd Generated && make config=release'
