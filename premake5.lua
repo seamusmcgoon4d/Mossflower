@@ -24,16 +24,16 @@ workspace "Mossflower"
 
     project "MossflowerLibrary"
         kind "StaticLib"
-        files { "./Source/MossflowerLibrary/**.cpp", "./Source/MossflowerLibrary/**.hpp", "./Source/MossflowerLibrary/**.inl" }
-        removefiles { "./Source/MossflowerLibrary/Main.cpp" }
-    
+        files { "./Source/Mossflower/**.cpp", "./Source/Mossflower/**.hpp", "./Source/Mossflower/**.inl" }
+        removefiles { "./Source/Mossflower/Main.cpp" }
+
     project "MossflowerExecutable"
         removeconfigurations { "Test" }
         kind "ConsoleApp"
-        files { "./Source/MossflowerLibrary/Main.cpp" }
+        files { "./Source/Mossflower/Main.cpp" }
         includedirs { "./Source/" }
         links { "MossflowerLibrary" }
-        
+
     project "GoogleTest"
         removeconfigurations { "Debug", "Release" }
         kind "StaticLib"
